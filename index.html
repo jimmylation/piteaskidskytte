@@ -9,19 +9,22 @@
             margin: 0;
             padding: 0;
             background: url('presentation.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-size: contain;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             font-family: Arial, sans-serif;
             color: white;
             text-align: center;
         }
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.6);
+        .frame {
+            border: 2px solid black;
+            border-radius: 20px;
             padding: 20px;
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            width: 80%;
+            max-width: 1000px;
         }
         h1 {
             font-size: 2.5em;
@@ -37,11 +40,12 @@
     </style>
 </head>
 <body>
-    <div class="content">
+    <div class="frame">
         <h1>Prova på skidskytte!</h1>
         <p>Perfekt för företag, lag, team eller enskilda grupper.<br>
            Testa grunderna i skidskytte, både liggande och stående skytte.<br>
-           Aktiviteten tar cirka 2 timmar och passar upp till 14 personer.</p>
+           Aktiviteten tar cirka 2 timmar och passar upp till 14 personer.<br>
+           Möjlighet att prova både sommar och vinter.</p>
         <p class="contact">Kontakta Andreas Marklund:<br>
            Telefon: 070-5945309<br>
            E-post: <a href="mailto:antemarklund@gmail.com" style="color: white;">antemarklund@gmail.com</a></p>
