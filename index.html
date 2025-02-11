@@ -8,8 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('presentation.jpg') no-repeat center center fixed;
-            background-size: contain;
+            background: black; /* Totalt svart bakgrund utanför textrutan */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -17,6 +16,7 @@
             font-family: Arial, sans-serif;
             color: black;
             text-align: center;
+            position: relative;
         }
         .container {
             width: 88%; /* Justerat för smalare ratio */
@@ -31,6 +31,7 @@
             align-items: center;
             padding: 40px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
         h1 {
             font-size: 3em;
@@ -56,6 +57,13 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .logo {
+            position: absolute;
+            bottom: 20px; /* Ändra denna rad för att justera höjdpositionen */
+            right: 20px; /* Ändra denna rad för att justera sidledspositionen */
+            max-width: 300px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -65,9 +73,10 @@
            Testa grunderna i skidskytte, både liggande och stående skytte.<br>
            Aktiviteten tar cirka 2 timmar och passar upp till 14 personer.<br>
            Möjlighet att prova både sommar och vinter.</p>
-        <p class="contact">Kontakta Andreas Marklund<br>
-           070-5945309<br>
-           <a href="mailto:antemarklund@gmail.com">antemarklund@gmail.com</a></p>
+        <p class="contact">📞 Kontakt: Andreas Marklund<br>
+           Telefon: 070-5945309<br>
+           E-post: <a href="mailto:antemarklund@gmail.com">antemarklund@gmail.com</a></p>
+        <img src="pitea_skidskytte_logo.jpg" alt="Piteå Skidskytte Logotyp" class="logo">
     </div>
 </body>
 </html>
