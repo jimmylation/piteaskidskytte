@@ -15,40 +15,56 @@
             justify-content: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-            color: white;
+            color: black;
             text-align: center;
         }
-        .frame {
-            border: 2px solid black;
-            border-radius: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            width: 80%;
-            max-width: 1000px;
+        .container {
+            width: 90%;
+            max-width: 1600px;
+            height: 80vh;
+            background: rgba(255, 255, 255, 0.9);
+            border: 5px solid black;
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.5em;
+            max-width: 1200px;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
         .contact {
-            margin-top: 20px;
+            margin-top: 30px;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+        .contact a {
+            color: black;
+            text-decoration: none;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="frame">
+    <div class="container">
         <h1>Prova på skidskytte!</h1>
         <p>Perfekt för företag, lag, team eller enskilda grupper.<br>
            Testa grunderna i skidskytte, både liggande och stående skytte.<br>
            Aktiviteten tar cirka 2 timmar och passar upp till 14 personer.<br>
            Möjlighet att prova både sommar och vinter.</p>
-        <p class="contact">Kontakta Andreas Marklund:<br>
+        <p class="contact">📞 Kontakt: Andreas Marklund<br>
            Telefon: 070-5945309<br>
-           E-post: <a href="mailto:antemarklund@gmail.com" style="color: white;">antemarklund@gmail.com</a></p>
+           E-post: <a href="mailto:antemarklund@gmail.com">antemarklund@gmail.com</a></p>
     </div>
 </body>
 </html>
