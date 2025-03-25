@@ -3,94 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sverigeklockan</title>
+    <title>Piteå Skidskytte - Prova På</title>
     <style>
         body {
-            background-color: #3A2F28; /* Mörkare beige */
-            color: #FFFBEA; /* Ljusare gulaktig färg */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            background: black; /* Totalt svart bakgrund utanför textrutan */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             font-family: Arial, sans-serif;
+            color: black;
+            text-align: center;
             position: relative;
         }
-        #clock {
-            font-size: 80vh;
-            font-weight: bold;
-            z-index: 1;
-        }
-        .dots-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .container {
+            width: 88%; /* Justerat för smalare ratio */
+            max-width: 1500px;
+            height: 80vh;
+            background: white; 
+            border: 5px solid black;
+            border-radius: 40px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: space-between;
-            pointer-events: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
-        .dot {
-            width: 10px;
-            height: 10px;
-            background-color: red;
-            border-radius: 50%;
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.5em;
+            max-width: 1200px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .contact {
+            margin-top: 30px;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-align: left;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .contact a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logo {
             position: absolute;
+            bottom: 20px; /* Ändra denna rad för att justera höjdpositionen */
+            right: 25px; /* Ändra denna rad för att justera sidledspositionen */
+            max-width: 400px;
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <div id="clock"></div>
-    <div class="dots-container" id="dots"></div>
-
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const options = {
-                timeZone: 'Europe/Stockholm',
-                hour: '2-digit',
-                minute: '2-digit',
-                hour12: false
-            };
-            document.getElementById('clock').innerText = new Intl.DateTimeFormat('sv-SE', options).format(now);
-            updateDots(now.getSeconds());
-        }
-
-        function updateDots(seconds) {
-            const dotsContainer = document.getElementById("dots");
-            dotsContainer.innerHTML = "";
-            const totalDots = 59; 
-            const screenWidth = window.innerWidth;
-            const screenHeight = window.innerHeight;
-            
-            for (let i = 0; i < seconds; i++) {
-                const dot = document.createElement("div");
-                dot.classList.add("dot");
-                let x, y;
-                if (i < totalDots / 4) {
-                    x = (i / (totalDots / 4)) * screenWidth;
-                    y = 0;
-                } else if (i < totalDots / 2) {
-                    x = screenWidth;
-                    y = ((i - totalDots / 4) / (totalDots / 4)) * screenHeight;
-                } else if (i < (3 * totalDots) / 4) {
-                    x = screenWidth - ((i - totalDots / 2) / (totalDots / 4)) * screenWidth;
-                    y = screenHeight;
-                } else {
-                    x = 0;
-                    y = screenHeight - ((i - (3 * totalDots) / 4) / (totalDots / 4)) * screenHeight;
-                }
-                dot.style.left = `${x}px`;
-                dot.style.top = `${y}px`;
-                dotsContainer.appendChild(dot);
-            }
-        }
-
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
+    <div class="container">
+        <h1>Prova på skidskytte!</h1>
+        <p>Perfekt för företag, lag, team eller enskilda grupper.<br>
+           Testa grunderna i skidskytte, både liggande och stående skytte.<br>
+           Aktiviteten tar cirka 2 timmar och passar upp till 14 personer.<br>
+           Möjlighet att prova både sommar och vinter.</p>
+        <p class="contact">Kontakta Andreas Marklund<br>
+           070-5945309<br>
+           <a href="mailto:antemarklund@gmail.com">antemarklund@gmail.com</a></p>
+        <img src="pitea_skidskytte_logo.jpg" alt="Piteå Skidskytte Logotyp" class="logo">
+    </div>
 </body>
 </html>
